@@ -4,7 +4,9 @@ WIDTH, HEIGHT = 600,650
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 color = (255,255,255)
 screen.fill(color)
+
 pygame.draw.rect(screen, (100,100,100), [50,50,500,500])
+
 pygame.draw.rect(screen, (200,200,200), [70,70,110,110])
 pygame.draw.rect(screen, (200,200,200), [185,70,110,110])
 pygame.draw.rect(screen, (200,200,200), [300,70,110,110])
@@ -27,13 +29,35 @@ pygame.draw.rect(screen, (200,200,200), [415,415,110,110])
 
 pygame.font.init()
 font = pygame.font.Font('freesansbold.ttf', 32)
-text = font.render("1", True, (0,0,0))
-textRect = text.get_rect()
+
+text1 = font.render('2', True, (0,0,0))
+textRect1 = text1.get_rect(topleft=(115,110))
+text2 = font.render('2', True, (0,0,0))
+textRect2 = text2.get_rect(topleft=(235,110))
+# text3 = font.render('', True, (0,0,0))
+# textRect3 = text3.get_rect(topleft=(110,110))
+# text4 = font.render('', True, (0,0,0))
+# textRect4 = text4.get_rect(topleft=(110,110))
+
+text5 = font.render('2', True, (0,0,0))
+textRect5 = text5.get_rect(topleft=(115,110))
+text6 = font.render('2', True, (0,0,0))
+textRect6 = text6.get_rect(topleft=(235,110))
+text7 = font.render('2', True, (0,0,0))
+textRect7 = text7.get_rect(topleft=(110,110))
+text8 = font.render('2', True, (0,0,0))
+textRect8 = text8.get_rect(topleft=(110,110))
+
 
 pygame.display.flip()
 
 run = True
 while run:
+    
+    screen.blit(text1, textRect1)
+    screen.blit(text2, textRect2)
+    pygame.display.flip()
+    
     for event in pygame.event.get():
 
         if event.type == pygame.QUIT:
