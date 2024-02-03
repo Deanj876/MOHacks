@@ -1,9 +1,11 @@
 import pygame
 
-WIDTH, HEIGHT = 1900,1080
+WIDTH, HEIGHT = 600,650
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-screen.fill((255,255,255))
-
+color = (255,255,255)
+screen.fill(color)
+pygame.display.flip()
+# pygame.draw.rect(screen, (200,200,200), [])
 
 run = True
 while run:
